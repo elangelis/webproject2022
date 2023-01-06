@@ -16,8 +16,8 @@ CREATE TABLE User
     isAdmin BOOLEAN NULL DEFAULT FALSE,
 
     location VARCHAR (255) NOT NULL DEFAULT '',
-    latitude DECIMAL  NOT NULL,
-    longitude DECIMAL  NOT NULL ,
+    latitude DECIMAL (255) NOT NULL DEFAULT '',
+    longitude DECIMAL (255) NOT NULL DEFAULT '',
 
     month_score INT DEFAULT  NULL DEFAULT '0',
     sum_score INT DEFAULT NULL DEFAULT '0',
