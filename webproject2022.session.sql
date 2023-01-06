@@ -1,5 +1,7 @@
-use webproject2022;
+-- Active: 1670794977661@@127.0.0.1@3306
+SHOW TABLES;
 DROP TABLE IF EXISTS User;
+SHOW TABLES;
 CREATE TABLE User
 (
 
@@ -16,8 +18,8 @@ CREATE TABLE User
     isAdmin BOOLEAN NULL DEFAULT FALSE,
 
     location VARCHAR (255) NOT NULL DEFAULT '',
-    latitude DECIMAL (255) NOT NULL DEFAULT '',
-    longitude DECIMAL (255) NOT NULL DEFAULT '',
+    latitude DECIMAL  NOT NULL,
+    longitude DECIMAL  NOT NULL ,
 
     month_score INT DEFAULT  NULL DEFAULT '0',
     sum_score INT DEFAULT NULL DEFAULT '0',
