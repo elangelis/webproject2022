@@ -1,0 +1,19 @@
+use webproject2022;
+DROP TABLE IF EXISTS Administrator;
+CREATE TABLE  Administrator
+(
+    id VARCHAR(255) NOT NULL DEFAULT '',
+    username VARCHAR(255) NOT NULL DEFAULT '',
+    password VARCHAR(255) NOT NULL DEFAULT '',
+    email VARCHAR(255) NOT NULL DEFAULT '',
+
+    name VARCHAR(255) NOT NULL DEFAULT '',
+    first_name VARCHAR(255) NOT NULL DEFAULT '',
+    last_name VARCHAR(255) NOT NULL DEFAULT '',
+
+    isAdmin BOOLEAN NULL DEFAULT TRUE,
+
+    PRIMARY KEY (id,name)
+);
+
+SHOW TABLES;

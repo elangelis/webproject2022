@@ -1,0 +1,12 @@
+USE webproject2022;
+DROP TABLE IF EXISTS Category;
+CREATE TABLE IF NOT EXISTS Category
+(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL DEFAULT '',
+    description VARCHAR(255) NOT NULL DEFAULT '',
+
+    PRIMARY KEY(id,name)
+);
+SHOW TABLES;
+
