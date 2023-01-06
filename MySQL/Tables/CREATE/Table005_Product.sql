@@ -1,6 +1,3 @@
-USE webproject2022;
-DROP TABLE IF EXISTS Product;
-SHOW TABLES;
 CREATE TABLE IF NOT EXISTS Product
 (
     id INT NOT NULL AUTO_INCREMENT,
@@ -20,4 +17,3 @@ CREATE TABLE IF NOT EXISTS Product
     FOREIGN KEY (subcategory_id) REFERENCES Subcategory(id)
     ON UPDATE CASCADE ON DELETE CASCADE
 );
-show tables;

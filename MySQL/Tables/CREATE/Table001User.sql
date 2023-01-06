@@ -1,5 +1,3 @@
-use webproject2022;
-DROP TABLE IF EXISTS user;
 CREATE TABLE user
 (
 
@@ -25,4 +23,3 @@ CREATE TABLE user
     PRIMARY KEY(id,username),
     UNIQUE KEY (email,password)
 );
-SHOW TABLES;

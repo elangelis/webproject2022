@@ -1,5 +1,4 @@
-USE webproject2022;
-DROP TABLE IF EXISTS Category;
+
 CREATE TABLE IF NOT EXISTS Category
 (
     id INT NOT NULL AUTO_INCREMENT,
@@ -8,5 +7,5 @@ CREATE TABLE IF NOT EXISTS Category
 
     PRIMARY KEY(id,name)
 );
-SHOW TABLES;
+
 

@@ -14,18 +14,6 @@
       <!--<title>Dashboard Sidebar Menu</title>--> 
     </head>
     <body>  
-    <?php
-    $dbhost = 'localhost';
-    $dbuser = 'root';
-    $dbpass = '';
-    $mysqli = new mysqli($dbhost,$dbuser,$dbpass);
-    if($mysqli -> connect_errno){
-      printf("Connection Failed",$mysqli->connect_error);
-      exit();
-    }
-    printf("Connection Sucessful");
-    $mysqli ->close();
-    ?>
       <div class="form">
         <div 
           class="form-toggle">
@@ -34,12 +22,14 @@
           class="form-panel one">
           <div class="form-header">
             <h1>Account Login
-
+              <p>
+                kane kati
+                <?php
+                echo "kane kati";
+                ?>
+              </p>
             </h1>
           </div>
-          <?php
-          echo " kane kati  ";
-          ?>
           <div class="form-content">
             <form>
               <div class="form-group">

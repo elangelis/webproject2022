@@ -1,5 +1,3 @@
-use webproject2022;
-DROP TABLE IF EXISTS Administrator;
 CREATE TABLE  Administrator
 (
     id VARCHAR(255) NOT NULL DEFAULT '',
@@ -15,5 +13,3 @@ CREATE TABLE  Administrator
 
     PRIMARY KEY (id,name)
 );
-
-SHOW TABLES;
