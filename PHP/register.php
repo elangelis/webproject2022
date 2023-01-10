@@ -6,6 +6,7 @@
     $reg_pass= "";
     $reg_email= "";
     $reg_confirm_password= "";
+    $pass_Conditions = False;
 
     if(isset($_SESSION['user'])){
 
@@ -24,24 +25,8 @@
         $reg_email=$_REQUEST(['reg_email'],FILTER_SANITIZE_EMAIL);
         $reg_confirm_password=$_REQUEST['reg_conf_pass'];
         
-        if(empty($reg_user)){
-            echo"Requires Username";
-        }
         
-        if(empty($reg_pass)){
-            echo"Requires Password";
-        }
         
-        if(empty($reg_email)){
-            
-            echo"Requires Email";
-        }
-        
-        if(empty($reg_confirm_password)){
-            
-            echo"Confirmation Password should match Password";
-        }
-
 
 
     }
