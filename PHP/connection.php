@@ -1,18 +1,24 @@
 <?php
 
-$db_host = 'webproject.localhost';
-$db_user = 'ilias';
-$db_password = "1234";
-$db_name = "webproject2022";
+//database connection
 
-try{
-    $db = new PDO("mysql:host={$db_host};dbname={$db_name};",$db_user,$db_password);
-    echo " connection echo ";
-    $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-}
-catch(PDOEXCEPTION $e){
-    echo $e->getMessage();
+require_once 'config.php';
+class Connection
+{
+	public static function make($db_host, $db_name, $db_user, $db_pass)
+	{
+		$dsn = "mysql:host=$db_host;dbname=$db_name;charset=UTF8";
+
+		try {
+			$options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
+
+			return new PDO($dsn, $db_user, $db_pass, $options);
+		} catch (PDOException $e) {
+			die($e->getMessage());
+		}
+	}
 }
 
+return Connection::make($db_host, $db_name, $db_user, $db_pass);
 
 ?>
