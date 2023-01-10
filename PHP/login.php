@@ -9,12 +9,10 @@ $login_email = "";
         if(isset($_SESSION['login_user'])){
 
             header("location:C:\\xampp\\htdocs\\webproject2022\\HTML_CSS_JAVASCRIPT\\2.Main_Page\\Main_Page.php");
-            echo 'You have already logged in, you will be redirected to Main Page automatically';
-
-        }else
-        {
+            echo 'You have already Logged in, you will be redirected to Main Page automatically';
+        }
+        else{
             if($_POST['login_user'] != "" || $_POST['login_pass'] != "" || $_POST['login_email'] != ""){    
-
                 
                 $sql_login_check = 'SELECT COUNT(*) FROM user WHERE :login_user=user AND :login_pass=password AND :login_email=email;';
                 $check_login = $pdo->prepare($sql_login_check);
@@ -28,13 +26,14 @@ $login_email = "";
                         echo 'Log in was sucesful, you will be redirected to Main Page automatically!';
 
                         header("location:C:\\xampp\\htdocs\\webproject2022\\HTML_CSS_JAVASCRIPT\\2.Main_Page\\Main_Page.php");
-                        session_start();
                         session_regenerate_id();
                         echo session_id();
-                    }catch(ErrorException $e){
+                    }
+                    catch(ErrorException $e){
                         echo $e->getMessage();
                     }
-                }else{
+                }
+                else{
                     echo 'User,Pass,or Email are incorrect. Please Enter your correct Credentials';
                     echo 'Do you want to Register first?';
                 }
@@ -48,4 +47,5 @@ $login_email = "";
             }
         }
     }
+
 ?>

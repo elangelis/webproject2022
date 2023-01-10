@@ -1,6 +1,5 @@
 <?php
 
-    session_start();
     echo session_id();
 
     $pdo = require "connection.php";
@@ -80,21 +79,23 @@
 
                                 echo 'Account created sucesfully, you will be redirected to Main Page automatically';
                                 header("location:C:\\xampp\\htdocs\\webproject2022\\HTML_CSS_JAVASCRIPT\\2.Main_Page\\Main_Page.php");
-
-                            }catch(PDOException $e){
+                                session_regenerate_id();
+                            }
+                            catch(PDOException $e){
                                 echo $e->getMessage();
                             }
                             $_SESSION['message']=array("text"=>"User successfully created.","alert"=>"info");
-                            $conn = null;
-
+                        
                         }
                         else{
                             echo 'Password must contain 1 Capital letter, 1 Number and any of those "@#$%" symbols and more than 8 Characters';
                         }
-                    }else{
+                    }
+                    else{
                         echo 'Confirmation Password should match Password';
                     }
-                }else{
+                }
+                else{
                     echo 'Please provide your Registration credentials';
                     echo "
                     <script>alert('Please fill up the required field!')</script>
@@ -104,4 +105,5 @@
             }
         }
     }
+
 ?>
