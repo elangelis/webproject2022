@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <?php
-  require_once "C:\\xampp\\htdocs\\webproject2022\\PHP\\connection.php";
+
+  require  "C:\\xampp\\htdocs\\webproject2022\\PHP\\register.php";
+  require  "C:\\xampp\\htdocs\\webproject2022\\PHP\\login.php";
 
   session_start();
 
@@ -40,11 +42,15 @@
             <form action="login.php" method="post">
               <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" required="required"/>
+                <input type="text" id="username" name="login_user" required="required"/>
               </div>
               <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required="required"/>
+                <input type="password" id="password" name="login_pass" required="required"/>
+              </div>
+              <div class="form-group">
+                <label for="email">email</label>
+                <input type="email" id="Email" name="login_email" required="required"/>
               </div>
               <div class="form-group">
                 <label class="form-remember">
@@ -52,7 +58,7 @@
                 </label><a class="form-recovery" href="#">Forgot Password?</a>
               </div>
               <div class="form-group">
-                <button type="submit">Log In</button>
+                <button type="submit"name='Log_In_button'>Log In</button>
               </div>
             </form>
           </div>

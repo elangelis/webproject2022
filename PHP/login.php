@@ -5,7 +5,7 @@ $login_username = "";
 $login_password = "";
 $login_email = "";
 
-    if(isset($_POST["Login Button"])){
+    if(isset($_POST["Log_In_button"])){
         if(isset($_SESSION['login_user'])){
 
             header("location:C:\\xampp\\htdocs\\webproject2022\\HTML_CSS_JAVASCRIPT\\2.Main_Page\\Main_Page.php");
