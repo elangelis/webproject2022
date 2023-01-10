@@ -11,7 +11,7 @@
     $reg_pass= "";
     $reg_email= "";
     $reg_confirm_password= "";
-    $success = false;
+    $success_register = false;
     $password_conditions = '/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.* )(?=.*[^a-zA-Z0-9]).{8,}$/m';
         
 
@@ -19,7 +19,8 @@
         if(isset($_SESSION['user'])){
 
             header("location:C:\\xampp\\htdocs\\webproject2022\\HTML_CSS_JAVASCRIPT\\2.Main_Page\\Main_Page.php");
-    
+            echo 'You have already Logged in recently';
+
         }else
         {
             if($_POST['reg_user'] != "" || $_POST['reg_pass'] != "" || $_POST['reg_email'] != "" || $_POST['reg_conf_pass'] != ""){
@@ -27,7 +28,7 @@
                     if(preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,}$/', $_POST['reg_pass'] )) {
                         
                         echo 'Password,user,email,confirmation password are correct. Wait to see if they are available!';
-                        $sucess=true;
+                        $success_register=true;
 
                         $reg_user =$_POST(['reg_user']);
                         $reg_pass =$_POST['reg_pass'];
@@ -42,7 +43,7 @@
                         if ($count_user<>0){
                             
                             echo 'User is already taken';
-                            $sucess=false;
+                            $success_register=false;
                         }
 
 
@@ -53,7 +54,7 @@
                         if ($count_pass<>0){
 
                             echo 'Password is already taken';
-                            $sucess=false;
+                            $success_register=false;
                         }
 
 
@@ -64,11 +65,11 @@
                         if ($count_email<>0){
                             
                             echo 'Email is already taken';
-                            $sucess=false;
+                            $success_register=false;
                         }
                         
 
-                        if($sucess=true){
+                        if($success_register=true){
                             try{
                                 $sql_register= 'CALL User_creation(:reg_user, :reg_pass, :reg_email)';
                                 $statement = $pdo->prepare($sql_register);
@@ -77,7 +78,7 @@
                                 $statement->bindParam(':reg_email',$reg_pass,PDO::PARAM_STR_CHAR);
                                 $statement->execute();
 
-                                echo 'Account created sucesfully, you will be transfered to Main Page automaticaly';
+                                echo 'Account created sucesfully, you will be redirected to Main Page automatically';
                                 header("location:C:\\xampp\\htdocs\\webproject2022\\HTML_CSS_JAVASCRIPT\\2.Main_Page\\Main_Page.php");
 
                             }catch(PDOException $e){
@@ -94,7 +95,7 @@
                         echo 'Confirmation Password should match Password';
                     }
                 }else{
-                    echo 'Please provice your registration credentials';
+                    echo 'Please provide your Registration credentials';
                     echo "
                     <script>alert('Please fill up the required field!')</script>
                     <script>window.location = 'registration.php'</script>
