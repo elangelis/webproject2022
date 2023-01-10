@@ -1,6 +1,7 @@
 <?php
 
     session_start();
+    echo session_id();
 
     $pdo = require "connection.php";
     var_dump($pdo);
