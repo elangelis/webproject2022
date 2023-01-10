@@ -24,11 +24,9 @@
         $reg_pass =$_REQUEST['reg_pass'];
         $reg_email=$_REQUEST(['reg_email'],FILTER_SANITIZE_EMAIL);
         $reg_confirm_password=$_REQUEST['reg_conf_pass'];
-        
-        
-        
 
-
+        $sql= 
+        
     }
     echo "asdiajda";
 ?>
