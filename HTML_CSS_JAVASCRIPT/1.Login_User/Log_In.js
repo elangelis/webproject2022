@@ -4,7 +4,16 @@
 
 
 
+
+
+
+
+
 //EVENT LISTENERS
+
+
+
+
 
 
 //register menu click event
@@ -20,6 +29,10 @@ document.querySelector('.form-toggle').addEventListener('click', function(e) {
   document.querySelector('.form-panel.one').classList.remove('hidden');
   document.querySelector('.form-panel.two').classList.remove('active');
 });
+
+
+
+
 
 
 

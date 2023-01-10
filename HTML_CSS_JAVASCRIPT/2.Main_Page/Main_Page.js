@@ -8,6 +8,9 @@
 
 
 
+
+
+
 //EVENT LISTENERS
 
 toggle.addEventListener("click", () => {
@@ -30,6 +33,9 @@ modeSwitch.addEventListener("click", () => {
 
   }
 });
+
+
+
 
 
 

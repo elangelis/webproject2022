@@ -117,41 +117,35 @@
 
     <section class="home">
         <div class="text">Dashboard Sidebar
+           
         </div>
-        <div class="text">Something
-        </div>
+        <section class="image" name="Leaflet" id="leaflet_01">
+            <div>
+                    <!--leaflet------------------>
+            </div>
+        </section>
+        <section class="form">Leaflet Filters
+            <div class="input" name="Filter_01" id="filter01">
+                    <!--leaflet---filter1------>
+            </div>
+            <div class="input" name="Filter_02" id="filter02">
+                    <!--leaflet---filter2------>
+            </div>
+            <div class="input" name="Filter_03" id="filter03">
+                    <!--leaflet---filter3------>
+            </div>
+            <div class="input" name="Filter_04" id="filter04">
+                    <!--leaflet---filter4------>
+            </div>
+            <div class="input" name="Filter_05" id="filter05">
+                    <!--leaflet---filter5------>
+            </div>
+        </section>    
     </section>
 
-    <script>
-        const body = document.querySelector('body'),
-            sidebar = body.querySelector('nav'),
-            toggle = body.querySelector(".toggle"),
-            searchBtn = body.querySelector(".search-box"),
-            modeSwitch = body.querySelector(".toggle-switch"),
-            modeText = body.querySelector(".mode-text");
 
 
-        toggle.addEventListener("click", () => {
-            sidebar.classList.toggle("close");
-        })
-
-        searchBtn.addEventListener("click", () => {
-            sidebar.classList.remove("close");
-        })
-
-        modeSwitch.addEventListener("click", () => {
-            body.classList.toggle("dark");
-
-            if (body.classList.contains("dark")) {
-                modeText.innerText = "Light mode";
-            } else {
-                modeText.innerText = "Dark mode";
-
-            }
-        });
-    </script>
-
-
+    <script type="text/javascript" src="Main_Page.js"></script>
 </body>
 
 </html>
