@@ -123,8 +123,8 @@
            
         </div>
         <section class="image" name="Leaflet" id="leaflet_01">
-            <div id="map">
-                #map { height: 180px; }
+            <div id="map" >
+
             </div>
             <div>
                     <!--leaflet------------------>
