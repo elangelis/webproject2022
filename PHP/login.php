@@ -14,7 +14,7 @@ $login_email = "";
         else{
             if($_POST['login_user'] != "" || $_POST['login_pass'] != "" || $_POST['login_email'] != ""){    
                 
-                $sql_login_check = 'SELECT COUNT(*) FROM user WHERE :login_user=user AND :login_pass=password AND :login_email=email;';
+                $sql_login_check = 'SELECT COUNT(*) FROM user WHERE :login_user=username AND :login_pass=password AND :login_email=email;';
                 $check_login = $pdo->prepare($sql_login_check);
                 $check_login->bindParam(':login_user',$login_username,PDO::PARAM_STR_CHAR);
                 $check_login->bindParam(':login_pass',$login_password,PDO::PARAM_STR_CHAR);
