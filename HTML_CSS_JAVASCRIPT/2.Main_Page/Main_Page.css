@@ -308,6 +308,20 @@ body.dark .home .text{
     color: var(--text-color);
 }
 
-map { 
-    height: 180px; 
+/* LEAFLET */
+
+#map { 
+    
+    min-height: 500px;
+    max-height: 800px;
+    height: 700px;
+
+    
+    margin-left: 20px;
+    margin-right: 100px;
+    min-width: 500px;
+    max-width: 2000px;
+    width: 1600px;
+
+    align-items: baseline;
 }
