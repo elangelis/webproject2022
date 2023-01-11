@@ -12,8 +12,10 @@ class Connection
 			$options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
 
 			return new PDO($dsn, $db_user, $db_password, $options);
+			echo 'Connection Succesful';
 		} catch (PDOException $e) {
 			die($e->getMessage());
+			echo 'Connection Unsuccesful';
 		}
 	}
 }

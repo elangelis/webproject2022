@@ -3,7 +3,7 @@
     echo session_id();
 
     $pdo = require "connection.php";
-    var_dump($pdo);
+    
 
 
     $reg_user="";
@@ -35,7 +35,7 @@
                         $reg_confirm_password=$_POST['reg_conf_pass'];
                         
 
-                        $sql_check_user = 'SELECT COUNT(*) as total_1 FROM user WHERE :reg_user=username;';
+                        $sql_check_user = 'SELECT COUNT(*) as total_1 FROM user WHERE :reg_user=username';
                         $count_user= $pdo->prepare($sql_check_user);
                         $count_user->bindParam(':reg_user',$reg_user,PDO::PARAM_STR_CHAR);
                         $count_user->execute();
@@ -46,7 +46,7 @@
                         }
 
 
-                        $sql_check_pass = 'SELECT COUNT(*) as total_2 FROM user WHERE :reg_pass=password;';
+                        $sql_check_pass = 'SELECT COUNT(*) as total_2 FROM user WHERE :reg_pass=password';
                         $count_pass= $pdo->prepare($sql_check_pass);
                         $count_pass->bindParam(':reg_pass',$reg_pass,PDO::PARAM_STR_CHAR);
                         $count_pass->execute();
@@ -57,7 +57,7 @@
                         }
 
 
-                        $sql_check_email = 'SELECT COUNT(*) as total_1 FROM user WHERE :reg_pass=email;';
+                        $sql_check_email = 'SELECT COUNT(*) as total_1 FROM user WHERE :reg_pass=email';
                         $count_email= $pdo->prepare($sql_check_email);
                         $count_email->bindParam(':reg_email',$reg_pass,PDO::PARAM_STR_CHAR);
                         $count_email->execute();
@@ -70,7 +70,7 @@
 
                         if($success_register=true){
                             try{
-                                $sql_register= 'CALL User_creation(:reg_user, :reg_pass, :reg_email);';
+                                $sql_register= 'CALL User_creation(:reg_user, :reg_pass, :reg_email)';
                                 $statement = $pdo->prepare($sql_register);
                                 $statement->bindParam(':reg_user',$reg_user,PDO::PARAM_STR_CHAR);
                                 $statement->bindParam(':reg_pass',$reg_pass,PDO::PARAM_STR_CHAR);
@@ -80,9 +80,11 @@
                                 echo 'Account created sucesfully, you will be redirected to Main Page automatically';
                                 header("location:C:\\xampp\\htdocs\\webproject2022\\HTML_CSS_JAVASCRIPT\\2.Main_Page\\Main_Page.php");
                                 session_regenerate_id();
+                                var_dump($pdo);
                             }
                             catch(PDOException $e){
                                 echo $e->getMessage();
+                                var_dump($pdo);
                             }
                             $_SESSION['message']=array("text"=>"User successfully created.","alert"=>"info");
                         
