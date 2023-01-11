@@ -2,8 +2,7 @@
 
     echo session_id();
 
-    $pdo = require "connection.php";
-    
+    require "connection.php";
 
 
     $reg_user="";
@@ -17,58 +16,71 @@
     if(isset($_POST["Register_button"])){
         if(isset($_SESSION['user'])){
 
-            header("location:C:\\xampp\\htdocs\\webproject2022\\HTML_CSS_JAVASCRIPT\\2.Main_Page\\Main_Page.php");
-            echo 'You have already Logged in recently';
+            header('location:/webproject2022/PHP/Main_Page.php');
 
         }else
         {
             if($_POST['reg_user'] != "" || $_POST['reg_pass'] != "" || $_POST['reg_email'] != "" || $_POST['reg_conf_pass'] != ""){
-                if($_POST['reg_pass']=$_POST['reg_conf_pass']){
-                    if(preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,}$/', $_POST['reg_pass'] )) {
+
+                $reg_user = $_POST['reg_user'];
+                $reg_pass = $_POST['reg_pass'];
+                $reg_email = $_POST['reg_email'];
+                $reg_confirm_password = $_POST['reg_conf_pass'];
+
+                if($reg_pass == $reg_pass){
+
+                    if(preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,}$/', $reg_pass)) {
                         
                         echo 'Password,user,email,confirmation password are correct. Wait to see if they are available!';
+
+
                         $success_register=true;
+                        $user_taken=false;
+                        $password_taken=false;
+                        $email_taken=false;
 
-                        $reg_user =$_POST(['reg_user']);
-                        $reg_pass =$_POST['reg_pass'];
-                        $reg_email=$_POST(['reg_email'],FILTER_SANITIZE_EMAIL);
-                        $reg_confirm_password=$_POST['reg_conf_pass'];
-                        
 
-                        $sql_check_user = 'SELECT COUNT(*) as total_1 FROM user WHERE :reg_user=username';
+                        $sql_check_user = 'SELECT COUNT(id) FROM user WHERE username=:reg_user';
                         $count_user= $pdo->prepare($sql_check_user);
                         $count_user->bindParam(':reg_user',$reg_user,PDO::PARAM_STR_CHAR);
                         $count_user->execute();
-                        if ($count_user<>0){
+
+                        $user_exists= $count_user->fetchColumn();
+                        if ($user_exists<>0){
                             
                             echo 'User is already taken';
+                            $user_taken=true;
                             $success_register=false;
                         }
 
 
-                        $sql_check_pass = 'SELECT COUNT(*) as total_2 FROM user WHERE :reg_pass=password';
+                        $sql_check_pass = 'SELECT COUNT(id) FROM user WHERE password=:reg_pass';
                         $count_pass= $pdo->prepare($sql_check_pass);
                         $count_pass->bindParam(':reg_pass',$reg_pass,PDO::PARAM_STR_CHAR);
                         $count_pass->execute();
-                        if ($count_pass<>0){
+                        $pass_exists= $count_pass->fetchColumn();
+                        if ($pass_exists<>0){
 
                             echo 'Password is already taken';
+                            $password_taken=true;
                             $success_register=false;
                         }
 
 
-                        $sql_check_email = 'SELECT COUNT(*) as total_1 FROM user WHERE :reg_pass=email';
+                        $sql_check_email = 'SELECT COUNT(*) as total_1 FROM user WHERE email=:reg_email';
                         $count_email= $pdo->prepare($sql_check_email);
                         $count_email->bindParam(':reg_email',$reg_pass,PDO::PARAM_STR_CHAR);
                         $count_email->execute();
-                        if ($count_email<>0){
-                            
+                        $email_exists= $count_email->fetchColumn();
+                        if ($email_exists<>0){
+
+                            $email_taken=true;
                             echo 'Email is already taken';
                             $success_register=false;
                         }
                         
 
-                        if($success_register=true){
+                        if($success_register==true){
                             try{
                                 $sql_register= 'CALL User_creation(:reg_user, :reg_pass, :reg_email)';
                                 $statement = $pdo->prepare($sql_register);
@@ -78,32 +90,41 @@
                                 $statement->execute();
 
                                 echo 'Account created sucesfully, you will be redirected to Main Page automatically';
-                                header("location:C:\\xampp\\htdocs\\webproject2022\\HTML_CSS_JAVASCRIPT\\2.Main_Page\\Main_Page.php");
                                 session_regenerate_id();
-                                var_dump($pdo);
+                                header('location:/webproject2022/PHP/Main_Page.php');
                             }
                             catch(PDOException $e){
                                 echo $e->getMessage();
-                                var_dump($pdo);
+                                
                             }
                             $_SESSION['message']=array("text"=>"User successfully created.","alert"=>"info");
                         
+                        }elseif($success_register==false){
+                            if ($user_taken==true){
+                                echo'User is already taken';
+                            }
+                            if ($password_taken==true){
+                                echo'Passowrd is already taken';    
+                            }
+                            if ($email_taken==true){
+                                echo'Email is already taken';    
+                            }
                         }
-                        else{
-                            echo 'Password must contain 1 Capital letter, 1 Number and any of those "@#$%" symbols and more than 8 Characters';
-                        }
-                    }
-                    else{
-                        echo 'Confirmation Password should match Password';
+                        
+                    }else{
+                        echo 'Password must contain 1 Capital letter, 1 Number and any of those "  @ # $ %  " symbols and more than 8 Characters';
                     }
                 }
                 else{
-                    echo 'Please provide your Registration credentials';
-                    echo "
-                    <script>alert('Please fill up the required field!')</script>
-                    <script>window.location = 'registration.php'</script>
-                    ";
+                    echo 'Confirmation Password should match Password';
                 }
+            }
+            else{
+                echo 'Please provide your Registration credentials';
+                echo "
+                <script>alert('Please fill up the required field!')</script>
+                <script>window.location = 'registration.php'</script>
+                ";
             }
         }
     }

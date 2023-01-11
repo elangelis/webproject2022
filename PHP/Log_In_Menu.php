@@ -2,9 +2,10 @@
 
 <?php
 
-  require_once  "/webproject2022/PHP/register.php";
-  
-  require_once  "/webproject2022/PHP/login.php";
+  require_once "C:\\xampp\\htdocs\\webproject2022\\PHP\\login.php";
+  require_once "C:\\xampp\\htdocs\\webproject2022\\PHP\\register.php";
+  require "connection.php";
+
 
   session_start();
 
@@ -20,7 +21,7 @@
       
     ?>
     <!----======== CSS ======== -->
-    <link rel="stylesheet" href="Log_In.css">  
+    <link rel="stylesheet" href="/webproject2022/HTML_CSS_JAVASCRIPT/1.Login_User/Log_In.css">  
 
     <!--<title>Dashboard Sidebar Menu</title>--> 
   </head>
@@ -115,6 +116,6 @@
       </a>
     </div-->
     <!----======== JavaScript ======== -->
-    <script type="text/javascript" src="Log_In.js"></script>
+    <script type="text/javascript" src="/webproject2022/HTML_CSS_JAVASCRIPT/1.Login_User/Log_In.js"></script>
   </body>
 </html>

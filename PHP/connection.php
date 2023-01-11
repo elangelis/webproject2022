@@ -2,24 +2,23 @@
 
 //database connection
 require_once 'config.php';
-class Connection
-{
-	public static function make($db_host, $db_name, $db_user, $db_password)
-	{
-		$dsn = "mysql:host=$db_host;dbname=$db_name;charset=UTF8";
+global $pdo;
 
-		try {
-			$options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
+$dsn = "mysql:host=$db_host;dbname=$db_name;charset=UTF8";
 
-			return new PDO($dsn, $db_user, $db_password, $options);
-			echo 'Connection Succesful';
-		} catch (PDOException $e) {
-			die($e->getMessage());
-			echo 'Connection Unsuccesful';
-		}
+	try {
+
+		$options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
+
+		$pdo=new PDO($dsn, $db_user, $db_password, $options);
+		echo 'Connection to MySql Succesful';
+
+	} catch(PDOException $e){
+
+		die($e->getMessage());
+		exit('Database error');
+
 	}
-}
-
-return Connection::make($db_host, $db_name, $db_user, $db_password);
 
 ?>
+
