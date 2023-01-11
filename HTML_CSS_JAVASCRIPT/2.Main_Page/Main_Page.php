@@ -10,8 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!----======== CSS ======== -->
+    <!----======== PAGE CSS ======== -->
     <link rel="stylesheet" href="Main_Page.css">
+    <!----======== LEAFLET ======== -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+
 
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -120,6 +123,9 @@
            
         </div>
         <section class="image" name="Leaflet" id="leaflet_01">
+            <div id="map">
+                #map { height: 180px; }
+            </div>
             <div>
                     <!--leaflet------------------>
             </div>
@@ -144,8 +150,11 @@
     </section>
 
 
-
+    <!----======== PAGE JS ======== -->
     <script type="text/javascript" src="Main_Page.js"></script>
+    <!----======== LEAFLET JS ======== -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
 </body>
 
 </html>
