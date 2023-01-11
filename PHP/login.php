@@ -1,8 +1,7 @@
 <?php
 
     echo session_id();
-
-
+    require_once "connection.php";
 
 
     $sucess_login=false;

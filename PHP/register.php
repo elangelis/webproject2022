@@ -1,8 +1,7 @@
 <?php
 
     echo session_id();
-
-    require "connection.php";
+    require_once "connection.php";
 
 
     $reg_user="";
