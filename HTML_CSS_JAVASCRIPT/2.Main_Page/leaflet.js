@@ -3,7 +3,7 @@ var map = L.map('map').setView([51.505, -0.09], 13);
 var marker = L.marker([51.5, -0.09]).addTo(map);
 var popup = L.popup();
 
-map.locate({setView: true, maxZoom: 16});
+//map.locate({setView: true, maxZoom: 10});
 
 var polygon = L.polygon([
     [51.509, -0.08],
@@ -44,7 +44,7 @@ function onMapClick2(e) {
 
 
 function Current_User_Location(){
-    map.locate({setView: true, maxZoom: 19});
+    map.locate({setView: true, maxZoom: 8});
     var User_latitude = e.latlng.toString();
     var User_longitude = e.latlng.toString();
     popup

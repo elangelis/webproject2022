@@ -13,7 +13,7 @@ map.locate({setView: true, maxZoom: 16});
 
 
 function Current_User_Location(){
-    map.locate({setView: true, maxZoom: 19});
+    map.locate({setView: true, maxZoom: 8});
     User_latitude = e.latlng.lat;
     User_longitude = e.latlng.lng;
     popup

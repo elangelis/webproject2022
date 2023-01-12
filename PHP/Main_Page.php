@@ -138,21 +138,15 @@
             </div>
         </section>
         <section class="form">Leaflet Filters
-            <div class="input" name="Filter_01" id="filter01">
-                    <!--leaflet---filter1------>
-            </div>
-            <div class="input" name="Filter_02" id="filter02">
-                    <!--leaflet---filter2------>
-            </div>
-            <div class="input" name="Filter_03" id="filter03">
-                    <!--leaflet---filter3------>
-            </div>
-            <div class="input" name="Filter_04" id="filter04">
-                    <!--leaflet---filter4------>
-            </div>
-            <div class="input" name="Filter_05" id="filter05">
-                    <!--leaflet---filter5------>
-            </div>
+            <div class="input" name="map_filter_1" id="map_filter_1"></div>
+
+            <div class="input" name="map_filter_2" id="map_filter_2"></div>
+            
+            <div class="input" name="map_filter_3" id="map_filter_3"></div>
+            
+            <div class="input" name="map_filter_4" id="map_filter_4"></div>
+            
+            <div class="input" name="map_filter_5" id="map_filter_5"></div>
         </section>    
     </section>
     
