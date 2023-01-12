@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html>
+<?php
 
-    <?php
+require_once "connection.php";
 
-        header('location:/webproject2022/HTML_CSS_JAVASCRIPT/2.Main_Page/Main_Page.php');
-        
-    ?>
+    $User_latitude = $_GET["User_latitude"];
+    $User_longitude =$_GET["User_longitude"];
 
-</html>
+    $hint = "";
+
+
+    if ($User_latitude == "") {
+        foreach($a as $name) {
+            if (stristr($q, substr($name, 0, $len))) {
+                if ($hint === "") {
+                    $hint = $name;
+                } else {
+                    $hint .= ", $name";
+                }
+            }
+        }
+    }
+?>
