@@ -12,7 +12,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-
+map.locate({setView: true, maxZoom: 5});
 
 
 
@@ -28,6 +28,7 @@ function onMapClick(e) {
 
 function onMapClick2(e) {
     Current_User_Location();
+
     popup
         .setLatLng(e.latlng)
         .setContent("You clicked the map at " + e.latlng.toString())
@@ -36,15 +37,17 @@ function onMapClick2(e) {
 
 
 function Current_User_Location(e){
-    map.locate({setView: true, maxZoom: 10});
+    
+    map.locate({setView: true, maxZoom: 5});
+
     User_latitude = e.latlng.toString();
-    ser_longitude = e.latlng.toString();
+    User_longitude = e.latlng.toString();
 
     popup.setLatLng(e.latlng).setContent("You are here " + e.latlng.toString()).openOn(map);
 
 }
 
 
-map.on('click', onMapClick2);
+map.on('click', onMapClick2());
 Current_User_Location();
 

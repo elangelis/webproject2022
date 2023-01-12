@@ -2,6 +2,7 @@
 
 //database connection
 require_once 'config.php';
+
 global $pdo;
 
 $dsn = "mysql:host=$db_host;dbname=$db_name;charset=UTF8";

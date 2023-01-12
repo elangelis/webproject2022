@@ -42,5 +42,11 @@ modeSwitch.addEventListener("click", () => {
 
   }
 });
+map.on('click',onMapClick2());
+
+Map.addEventListener('click',()=>{
+
+  onMapClick2(e);
+})
 
 
