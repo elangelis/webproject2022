@@ -1,24 +1,30 @@
 USE webproject2022;
-DROP PROCEDURE Show_Shops_Marker_Press;
+DROP PROCEDURE Show_Offers_Shop_Marker;
+
 DELIMITER &&  
-CREATE PROCEDURE Show_Shops_Marker_Press (IN in_shopname VARCHAR(255))   
-BEGIN    
+CREATE PROCEDURE Show_Offers_Shop_Marker (IN in_shop_longitude DECIMAL,IN in_shop_latitude DECIMAL)   
+BEGIN
 
-        SELECT  Shop.name AS "Όνομα Καταστήματος",
-                Offer.id AS "Προσφορές Καταστήματος",
-                Offer.product_id AS "Προϊόν",
-                Offer.product_price AS "Τιμή",
-                Offer.creation_date AS "Ημερομηνία Καταχώρησης",
-                Offer.likes AS "Likes",
-                Offer.dislikes AS "Dislikes",
-                Inventory.has_stock AS "Απόθεμα ΝΑΙ/ΟΧΙ"
-        FROM Shop
-        INNER JOIN Offer ON Offer.shop_id = Shop.id
-        INNER JOIN Inventory ON Inventory.id = Shop.id
-        WHERE Shop.name = in_shopname;
+        SELECT  s.id,s.name,
+                o.product_id,
+                o.product_price,
+                o.mesi_timi_day_critiria,
+                o.mesi_timi_week_critiria
+                o.creation_date
+                o.likes,
+                o.dislikes,
+                o.has_stock,
+                o.stock_avail,
+                o.creation_date
+        FROM 
+                Shop as s,
+                Offer as o 
+        WHERE  ( ((s.latitude=in_shop_latitude) AND (s.longitude=in_shop_longitude))
+        AND     (o.shop_id=s.id)                                                        
+        );
 
-END &&
+END &&  
 DELIMITER ;
 
-CALL Show_Shops_Marker_Press ("vasilopoulos");
+CALL Show_Offers_Shop_Marker ("Basilopoulos");
 

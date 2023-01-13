@@ -18,6 +18,11 @@ CREATE TABLE Offer
     dislikes INT NOT NULL DEFAULT '0',
     IsActive BOOLEAN NOT NULL DEFAULT FALSE,
 
+    mesi_timi_day DECIMAL NOT NULL DEFAULT '0',
+    mesi_timi_week DECIMAL NOT NULL DEFAULT '0',
+    mesi_timi_day_critiria BOOLEAN DEFAULT FALSE,
+    mesi_timi_week_critiria BOOLEAN DEFAULT FALSE,
+
     PRIMARY KEY (id,creation_date,IsActive),
     UNIQUE KEY(stock_avail,has_stock),
 
@@ -28,6 +33,12 @@ CREATE TABLE Offer
     CONSTRAINT offer_product_id
     FOREIGN KEY (product_id) REFERENCES Product(id)
     ON UPDATE CASCADE ON DELETE CASCADE,
+
+    CONSTRAINT offer_creation_user_id
+    FOREIGN KEY (creation_user_id) REFERENCES User(id)
+    ON UPDATE CASCADE ON DELETE CASCADE,
+
+
 
 );
 

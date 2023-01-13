@@ -5,7 +5,10 @@ CREATE TABLE IF NOT EXISTS Product
     category_id INT NOT NULL DEFAULT '0',
     subcategory_id INT NOT NULL DEFAULT '0',
     description TEXT (255) NOT NULL DEFAULT '0',
+    photo TEXT(255) NOT NULL DEFAULT ''
 
+    mesi_timi_day DECIMAL NOT NULL DEFAULT '0',
+    mesi_timi_week DECIMAL NOT NULL DEFAULT '0',
 
     PRIMARY KEY(id,name),
 
@@ -16,4 +19,5 @@ CREATE TABLE IF NOT EXISTS Product
     CONSTRAINT product_subcategory_id
     FOREIGN KEY (subcategory_id) REFERENCES Subcategory(id)
     ON UPDATE CASCADE ON DELETE CASCADE
+    
 );

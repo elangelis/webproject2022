@@ -7,7 +7,6 @@ CREATE TABLE Shop
     products INT DEFAULT NULL DEFAULT '',
     has_Offer BOOLEAN NOT NULL DEFAULT FALSE,
 
-    location VARCHAR (255) NOT NULL DEFAULT '',
     latitude DECIMAL (255) NOT NULL DEFAULT '',
     longitude DECIMAL (255) NOT NULL DEFAULT '',
 
