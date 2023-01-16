@@ -4,20 +4,22 @@ CREATE TABLE Offer
     shop_id INT NOT NULL DEFAULT '0',
     shop_name VARCHAR (255) NOT NULL DEFAULT '0',
     product_id INT NOT NULL DEFAULT '0',
-    product_price DECIMAL NOT NULL DEFAULT '0',
     inventory_id INT NOT NULL DEFAULT '0',
     category_id INT NOT NULL DEFAULT '0',
     subcategory_id INT NOT NULL DEFAULT '0',
+
     stock_avail INT NOT NULL DEFAULT '0',
     has_stock BOOLEAN DEFAULT FALSE,
 
     creation_date DATE not null,
     expiration_date DATE not null DEFAULT '0',
     creation_user_id INT NOT NULL DEFAULT '0',
+    
     likes INT NOT NULL DEFAULT '0',
     dislikes INT NOT NULL DEFAULT '0',
     IsActive BOOLEAN NOT NULL DEFAULT FALSE,
 
+    product_price DECIMAL NOT NULL DEFAULT '0',
     mesi_timi_day DECIMAL NOT NULL DEFAULT '0',
     mesi_timi_week DECIMAL NOT NULL DEFAULT '0',
     mesi_timi_day_critiria BOOLEAN DEFAULT FALSE,

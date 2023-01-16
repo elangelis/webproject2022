@@ -12,7 +12,7 @@ DECLARE
 BEGIN
     SELECT COUNT(*) INTO UserSum
     FROM User;
-    Bank_Sum=50*UserSum;
+    Bank_Sum=100*UserSum;
     Month_Avail=Bank_Sum/(80*100);
     INSERT INTO TokenBank(Bank_TOTAL,Bank_AVAIL,User_Count,Token_Date) VALUES (Bank_Sum,Month_Avail,UserSum,CURRENT_TIMESTAMP);
 END&&
