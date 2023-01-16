@@ -22,5 +22,7 @@ BEGIN
     AND radius<=ABS(s.latitude)+ABS(s.longitude);
 
 END &&  
-DELIMITER ;   
+
+DELIMITER ;  
+
 CALL Show_Shops_User_Location_Commit_Offer ("1","1");

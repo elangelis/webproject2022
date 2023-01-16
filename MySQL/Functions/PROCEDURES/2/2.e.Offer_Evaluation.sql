@@ -31,6 +31,7 @@ BEGIN
         WHERE (o.id=in_offer_id)
 
 END &&  
+
 DELIMITER ;
 
 CALL Show_Offers_Shop_Marker ("Basilopoulos");

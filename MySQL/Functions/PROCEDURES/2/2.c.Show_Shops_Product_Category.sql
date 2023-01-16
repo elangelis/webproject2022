@@ -20,6 +20,7 @@ BEGIN
 
 
 END &&  
+
 DELIMITER ;  
 
 CALL Show_Shops_Product_Category("Είδη υγινεινής");

@@ -1,0 +1,22 @@
+CREATE TABLE TokenBank
+(
+    Bank_TOTAL,
+    Bank_AVAIL,
+    User_Count,
+    Token_Date DATE,
+
+
+    Month DATE,   
+    Month_EndingDate   DATE,
+    Month_StartingDate DATE,
+    Month_Sum INTEGER,
+    
+    Year DATE, 
+    Year_StartingDate DATE,
+    Year_EndingDate DATE,
+    Year_Sum INTEGER,
+
+    PRIMARY KEY(Token_Date)
+
+);
+

@@ -23,5 +23,7 @@ BEGIN
     AND has_Offer=TRUE;
     
 END &&  
+
 DELIMITER ;   
+
 CALL Show_Shops_User_Location ("1","1");

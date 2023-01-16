@@ -23,6 +23,7 @@ BEGIN
     AND has_Offer=TRUE;
      
 END &&  
+
 DELIMITER ;
 
 CALL Show_Shops_Based_On_Name ("Basilopoulos");
