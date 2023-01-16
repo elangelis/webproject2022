@@ -13,16 +13,15 @@ DECIMAL absolute_longitude;
 DECIMAL absolute_latitude;
 
 BEGIN
-    absolute_latitude=ABS(min_latitude)+ABS(max_latitude);
-    absolute_longitude=ABS(min_longitude)+ABS(max_longitude);
+    absolute_latitude=ABS(in_latitude);
+    absolute_longitude=ABS(in_longitude);
     
 
     SELECT id,name,address,description,products,latitude,longitude
     FROM Shop
     WHERE (latitude >= min_latitude OR  latitude <= max_latitude)
     AND (longitude <=max_longitude OR  longitude >= min_longitude)
-    AND absolute_latitude<=50
-    AND absolute_longitude<=50;
+    AND absolute_latitude+absolute_longitude<=50;
     
 END &&  
 DELIMITER ;   
