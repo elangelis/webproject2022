@@ -7,6 +7,7 @@ CREATE PROCEDURE Calculate_Week_Mesi_Timi (IN in_product_id INTEGER, OUT mesi_ti
 DECLARE
 
     DATE current_date=CURDATE();
+    INT sum;
     INT mesi_timi_week;
     INT shop_sum;
 
