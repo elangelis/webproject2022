@@ -1,0 +1,28 @@
+use webproject2022;
+
+DROP PROCEDURE Calculate_Week_Mesi_Timi;
+
+DELIMITER&&
+CREATE PROCEDURE Calculate_Week_Mesi_Timi (IN in_product_id INTEGER, OUT mesi_timi_week INT)
+DECLARE
+
+    DATE current_date=CURDATE();
+    INT mesi_timi_week;
+    INT shop_sum;
+
+BEGIN
+
+    SELECT product_price,COUNT(shop_id) INTO sum,shop_sum
+    FROM Offer
+    WHERE product_id = in_product_id
+    AND creation_date <= current_date
+    AND current_date <=expiration_date <= expiration_date;
+    AND IsActive=true;
+    
+    mesi_timi_week=sum/shop_sum;
+
+
+END&&
+DELIMITER;
+
+CALL Calculate_Week_Mesi_Timi();
