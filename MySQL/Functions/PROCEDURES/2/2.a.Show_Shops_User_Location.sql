@@ -9,18 +9,17 @@ DECIMAL max_latitude =in_latitude+50;
 DECIMAL min_latitude =in_latitude-50;
 DECIMAL max_longitude=in_longitude+50;
 DECIMAL min_longitude=in_longitude-50;
-DECIMAL absolute_longitude;
-DECIMAL absolute_latitude;
+DECIMAL radius;
 
 BEGIN
-    absolute_latitude=ABS(in_latitude);
-    absolute_longitude=ABS(in_longitude);
 
-    SELECT id,name,address,description,products,has_Offer,latitude,longitude
-    FROM Shop
-    WHERE (latitude >= min_latitude OR  latitude <= max_latitude)
-    AND (longitude <=max_longitude OR  longitude >= min_longitude)
-    AND absolute_latitude+absolute_longitude<=50
+    radius=ABS(in_latitude)+ABS(in_latitude);
+
+    SELECT id,name,address,description,products,latitude,longitude
+    FROM Shop as s
+    WHERE (s.latitude >= min_latitude OR  s.latitude <= max_latitude)
+    AND (s.longitude <=max_longitude OR  s.longitude >= min_longitude)
+    AND radius<=ABS(s.latitude)+ABS(s.longitude)
     AND has_Offer=TRUE;
     
 END &&  
