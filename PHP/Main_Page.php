@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="/webproject2022/HTML_CSS_JAVASCRIPT/2.Main_Page/Main_Page.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
 
-    
-   
+      
     <!--<title>Dashboard Sidebar Menu</title>-->
 </head>
 
