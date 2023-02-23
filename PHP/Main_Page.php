@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" >
-    <link rel="stylesheet" href="/webproject2022/HTML_CSS_JAVASCRIPT/2.Main_Page/Main_Page.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
 
-      
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+    <link rel="stylesheet" href="/webproject2022/HTML_CSS_JAVASCRIPT/2.Main_Page/Main_Page.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+
+
     <!--<title>Dashboard Sidebar Menu</title>-->
 </head>
 
@@ -24,8 +24,8 @@
                 </span>
 
                 <div class="text logo-text">
-                    <span class="name">Codinglab</span>
-                    <span class="profession">Web developer</span>
+                    <span class="name">Ceid</span>
+                    <span class="profession">Project Web</span>
                 </div>
             </div>
 
@@ -110,35 +110,98 @@
         </div>
 
     </nav>
+    <nav class="sidebar-filters close">
+        <div class="menu-filters-bar">
+            <div class="menu-filters">
 
+                <li class="search-box-filters">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links-filters">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Filter 1</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bar-chart-alt-2 icon'></i>
+                            <span class="text nav-text">Filter 2</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Filter 3</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-pie-chart-alt icon'></i>
+                            <span class="text nav-text">Filter 4</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-heart icon'></i>
+                            <span class="text nav-text">Filter 5</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-wallet icon'></i>
+                            <span class="text nav-text">Filter 6</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="menu-filters-bar">
+            <div menu-filters>
+                <section class="form">Leaflet Filters
+                    <div class="input" name="map_filter_1" id="map_filter_1">
+
+                    </div>
+                    <div class="input" name="map_filter_2" id="map_filter_2">
+
+                    </div>
+                    <div class="input" name="map_filter_3" id="map_filter_3">
+
+                    </div>
+                    <div class="input" name="map_filter_4" id="map_filter_4">
+
+                    </div>
+                    <div class="input" name="map_filter_5" id="map_filter_5">
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </nav>
+    
     <section class="home">
-        <div class="text">Dashboard Sidebar
-           
+        <div class="text">Leaflet MAP
+
         </div>
         <section class="image" name="Leaflet" id="leaflet_01">
-            <div id="map" >
-
-            </div>
-            <div>
-                    <!--leaflet------------------>
-            </div>
+            <div id="map"></div>
+            <div><!--leaflet------------------></div>
         </section>
-        <section class="form">Leaflet Filters
-            <div class="input" name="map_filter_1" id="map_filter_1"></div>
-
-            <div class="input" name="map_filter_2" id="map_filter_2"></div>
-            
-            <div class="input" name="map_filter_3" id="map_filter_3"></div>
-            
-            <div class="input" name="map_filter_4" id="map_filter_4"></div>
-            
-            <div class="input" name="map_filter_5" id="map_filter_5"></div>
-        </section>    
     </section>
+    
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script type="text/javascript" src="/webproject2022/HTML_CSS_JAVASCRIPT/2.Main_Page/Main_Page.js"></script>
     <script type="text/javascript" src="/webproject2022/HTML_CSS_JAVASCRIPT/2.Main_Page/leaflet.js"></script>
-   
+
 </body>
 
 </html>

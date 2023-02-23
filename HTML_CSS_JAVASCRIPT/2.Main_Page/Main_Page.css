@@ -7,6 +7,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
+
 :root{
     /* ===== Colors ===== */
     --body-color: #E4E9F7;
@@ -34,6 +36,7 @@ body{
     color: #fff;
 }
 
+
 body.dark{
     --body-color: #18191a;
     --sidebar-color: #242526;
@@ -43,8 +46,8 @@ body.dark{
     --text-color: #ccc;
 }
 
-/* ===== Sidebar ===== */
- .sidebar{
+/* ===== LEFT Sidebar ===== */
+ .sidebar-filters{
     position: fixed;
     top: 0;
     left: 0;
@@ -58,6 +61,72 @@ body.dark{
 .sidebar.close{
     width: 88px;
 }
+
+
+/*  RIGHT SIDEBAR */
+.sidebar2{
+    float: right;
+    height: 100%;
+}
+/*
+.sidebar2{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;  
+}
+.sidebar2.close{
+    width: 88px;
+    position:absolute;
+    right: 0;
+    width: auto;
+    height: auto;
+
+}
+/*
+.sidebar2 .menu-filters{
+    margin-top: 40px;
+}
+.menu-filters-bar .mode .sun-moon{
+    height: 50px;
+    width: 60px;
+}
+.sidebar .menu-filters-bar{
+    height: calc(100% - 55px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+.menu-filters::-webkit-scrollbar{
+    display: none;
+}
+.sidebar .menu-filters-bar .mode{
+    border-radius: 6px;
+    background-color: var(--primary-color-light);
+    position: relative;
+    transition: var(--tran-05);
+}
+.menu-filters-bar .bottom-content .toggle-switch{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/*RIGHT SIDEBAR END*/
+
 
 /* ===== Reusable code - Here ===== */
 .sidebar li{
@@ -321,7 +390,8 @@ body.dark .home .text{
     margin-right: 100px;
     min-width: 500px;
     max-width: 2000px;
-    width: 1600px;
+    width: 1000px;
 
     align-items: baseline;
 }
+
