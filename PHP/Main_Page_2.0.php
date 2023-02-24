@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
-    <link rel="stylesheet" href=PHP/ >
+    <link rel="stylesheet" href="PHP/Main_Page_2.0.css">
     <link rel="stylesheet" href="/HTML_CSS_JAVASCRIPT/2.Main_Page/Main_Page.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <!--<title>Dashboard Sidebar Menu</title>-->
