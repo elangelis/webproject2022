@@ -22,7 +22,6 @@
                 <span class="image">
                     <!--<img src="logo.png" alt="">-->
                 </span>
-
                 <div class="text logo-text">
                     <span class="name">Ceid</span>
                     <span class="profession">Project Web</span>
@@ -31,7 +30,6 @@
 
             <i class='bx bx-chevron-right toggle'></i>
         </header>
-
         <div class="menu-bar">
             <div class="menu">
 

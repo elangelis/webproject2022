@@ -1,44 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    /* ===== Colors ===== */
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+body{
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+::selection{
+    background-color: var(--primary-color);
+    color: #fff;
+}
 .center-div
  {
  margin: 0 auto;
  padding: 15px;
  background-color: red;
-
  }
 
+/*Contents for main class*/
 #contents {
-overflow: auto;
-margin: auto;
-margin-bottom: 10px;
-width: 100%;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
-#sidebar {
-position: fixed;
-float: left;
-width: 200;
-margin: 5px;
-margin-left: 15px;
-padding: 5px;
-top: 46px;
-margin-top: 20px;
-
+/*Header*/
+.header{
+    position: relative;
 }
 
-#sidebar2 {
-position: fixed;
-float: right;
-width: 50px;
-margin: 5px;
-padding: 5px;
-top: 46px;
-margin-top: 20px;
+.header .image-text{
+    display: flex;
+    align-items: center;
+}
+.header .logo-text{
+    display: flex;
+    flex-direction: column;
+}
+.header .image-text .name {
+    margin-top: 2px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header .image-text .profession{
+    font-size: 16px;
+    margin-top: -2px;
+    display: block;
+}
+
+.header .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .image img{
+    width: 40px;
+    border-radius: 6px;
+}
+
+.sidebar_left.close .header .toggle{
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+.sidebar_right.close .header .toggle{
+    position: absolute;
+    top: 50%;
+    left:0px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+/*Left Sidebar for Navigation*/
+#sidebar_left {
+    position: fixed;
+    float: left;
+    height: 100%;
+    left: 0px;
+    width: 200px;
+    margin: 5px;
+    margin-left: 15px;
+    padding: 5px;
+    top: 46px;
+    margin-top: 20px;
+}
+
+/*Right Sidebar for Filters*/
+#sidebar_right {
+    position: fixed;
+    float: right;
+    height: 100%;
+    right: 0px;
+    width: 200px;
+    margin: 5px;
+    padding: 5px;
+    top: 46px;
+    margin-top: 20px;
+}
+/*Both sidebars class for icons*/
+.sidebars li{
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.sidebars header .image{
+    min-width: 60px;
+    border-radius: 6px;
+}
+.sidebars .menu{
+    margin-top: 40px;
+}
+
+.sidebars .icon{
+    min-width: 60px;
+    border-radius: 6px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.sidebar .text,
+.sidebar .icon{
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+.sidebars .text{
+    font-size: 17px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 1;
+}
+.sidebars .toggle{
+    transform: translateY(-50%) rotate(0deg);
 }
 
 #mainContents {
-    float: right;
-    width: calc(100% - 300px);
+    float: left;
+    width: 100%;
     margin: 0px;
+    margin-left: 15%;
+    margin-right: 40%;
     padding: 5px;
     padding-top: 20px;
+}
+
+/*Leaflet map*/
+#map {
+
+    left: 0px;
+    height: 680px;
+    width: 68%;
+    margin-left: 20px;
+    margin-right: 500px;
+    width: px;
+
+}
+
+/* DARK MODE */
+
+body.dark{
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+body.dark .sidebars header .toggle{
+    color: var(--text-color);
+}
+.sidebar_right.close .toggle{
+    transform: translateY(-50%) rotate(0deg);
+}
+.sidebar_left.close .toggle{
+    transform: translateY(-50%) rotate(0deg);
 }
