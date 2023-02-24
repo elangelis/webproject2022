@@ -1,0 +1,44 @@
+.center-div
+ {
+ margin: 0 auto;
+ padding: 15px;
+ background-color: red;
+
+ }
+
+#contents {
+overflow: auto;
+margin: auto;
+margin-bottom: 10px;
+width: 100%;
+}
+
+#sidebar {
+position: fixed;
+float: left;
+width: 200;
+margin: 5px;
+margin-left: 15px;
+padding: 5px;
+top: 46px;
+margin-top: 20px;
+
+}
+
+#sidebar2 {
+position: fixed;
+float: right;
+width: 50px;
+margin: 5px;
+padding: 5px;
+top: 46px;
+margin-top: 20px;
+}
+
+#mainContents {
+    float: right;
+    width: calc(100% - 300px);
+    margin: 0px;
+    padding: 5px;
+    padding-top: 20px;
+}
