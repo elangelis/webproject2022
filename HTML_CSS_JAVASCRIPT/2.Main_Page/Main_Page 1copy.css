@@ -1,13 +1,38 @@
 /* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
+:root{
+    /* ===== Colors ===== */
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
 
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
 
+body{
+    min-height: 100vh;
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
 
-
-
-
-
-
+::selection{
+    background-color: var(--primary-color);
+    color: #fff;
+}
 
 body.dark{
     --body-color: #18191a;
@@ -18,8 +43,8 @@ body.dark{
     --text-color: #ccc;
 }
 
-/* ===== LEFT Sidebar ===== */
- .sidebar-filters{
+/* ===== Sidebar ===== */
+ .sidebar{
     position: fixed;
     top: 0;
     left: 0;
@@ -33,72 +58,6 @@ body.dark{
 .sidebar.close{
     width: 88px;
 }
-
-
-/*  RIGHT SIDEBAR */
-.sidebar2{
-    float: right;
-    height: 100%;
-}
-/*
-.sidebar2{
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 250px;
-    padding: 10px 14px;
-    background: var(--sidebar-color);
-    transition: var(--tran-05);
-    z-index: 100;  
-}
-.sidebar2.close{
-    width: 88px;
-    position:absolute;
-    right: 0;
-    width: auto;
-    height: auto;
-
-}
-/*
-.sidebar2 .menu-filters{
-    margin-top: 40px;
-}
-.menu-filters-bar .mode .sun-moon{
-    height: 50px;
-    width: 60px;
-}
-.sidebar .menu-filters-bar{
-    height: calc(100% - 55px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow-y: scroll;
-}
-.menu-filters::-webkit-scrollbar{
-    display: none;
-}
-.sidebar .menu-filters-bar .mode{
-    border-radius: 6px;
-    background-color: var(--primary-color-light);
-    position: relative;
-    transition: var(--tran-05);
-}
-.menu-filters-bar .bottom-content .toggle-switch{
-    position: absolute;
-    right: 0;
-    height: 100%;
-    min-width: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-
-/*RIGHT SIDEBAR END*/
-
 
 /* ===== Reusable code - Here ===== */
 .sidebar li{
@@ -351,5 +310,18 @@ body.dark .home .text{
 
 /* LEAFLET */
 
+#map { 
+    
+    min-height: 500px;
+    max-height: 800px;
+    height: 700px;
 
+    
+    margin-left: 20px;
+    margin-right: 100px;
+    min-width: 500px;
+    max-width: 2000px;
+    width: 1600px;
 
+    align-items: baseline;
+}

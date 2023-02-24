@@ -214,7 +214,7 @@
     </div>
     <div name='scripts'>
         <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-        <script type="text/javascript" src="/webproject2022/HTML_CSS_JAVASCRIPT/2.Main_Page/Main_Page.js"></script>
+        <script type="text/javascript" src=PHP/main""></script>
         <script type="text/javascript" src="/webproject2022/HTML_CSS_JAVASCRIPT/2.Main_Page/leaflet.js"></script>
     </div>
 </body>
