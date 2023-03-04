@@ -29,19 +29,13 @@ body{
     background-color: var(--primary-color);
     color: #fff;
 }
-.center-div
- {
- margin: 0 auto;
- padding: 15px;
- background-color: red;
- }
 
 /*Contents for main class*/
 #contents {
     overflow: hidden;
     margin: auto;
     margin-bottom: 10px;
-    width: 100%;
+    width: 80%;
 }
 
 /*Header*/
@@ -153,7 +147,15 @@ body{
     border-radius: 6px;
 }
 .sidebars .menu{
-    margin-top: 40px;
+    margin-top: 0px;
+}
+.sidebar_left.close .menu{
+    position: relative;
+}
+#sidebar_right .menu{
+    position: absolute;
+    top: 100px;
+
 }
 .sidebars .icon{
     min-width: 60px;
@@ -218,6 +220,7 @@ body{
 }
 .sidebars .menu-bar{
     height: calc(100% - 55px);
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -233,7 +236,8 @@ body{
     transition: var(--tran-05);
 }
 .mode .sun-moon i{
-    position: absolute;
+    position: fixed;
+    bottom: 0px;
 }
 .mode .sun-moon i.sun{
     opacity: 0;
@@ -244,8 +248,9 @@ body{
 }
 .menu-bar .bottom-content .toggle-switch{
     position: absolute;
-    right: 0;
-    height: 100%;
+    left: 0px;
+    bottom: 0px;
+    height: 200px;
     min-width: 60px;
     display: flex;
     align-items: center;
@@ -308,10 +313,10 @@ body.dark .sidebars header .toggle{
     opacity: 0;
 }
 .sidebar_right.close .text{
-    opacity: 0;
+    opacity: 100;
 }
-body.dark .sidebar li a:hover .icon,
-body.dark .sidebar li a:hover .text{
+body.dark .sidebars li a:hover .icon,
+body.dark .sidebars li a:hover .text{
     color: var(--text-color);
 }
 body.dark .mode .sun-moon i.sun{
