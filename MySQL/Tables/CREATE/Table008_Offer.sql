@@ -25,7 +25,7 @@ CREATE TABLE Offer
     mesi_timi_day_critiria BOOLEAN DEFAULT FALSE,
     mesi_timi_week_critiria BOOLEAN DEFAULT FALSE,
 
-    PRIMARY KEY (id,creation_date,IsActive),
+    PRIMARY KEY (id,creation_date),
     UNIQUE KEY(stock_avail,has_stock),
 
     CONSTRAINT offer_shop_id

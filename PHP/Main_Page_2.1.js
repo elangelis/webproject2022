@@ -1,4 +1,5 @@
 //GLOBAL VARIABLES
+alert("Page Start");
 
 const body = document.querySelector('body'),
 sidebars = body.getElementsByClassName('nav'),
@@ -8,7 +9,8 @@ modeSwitch = document.getElementById("toggle_switch_1"),
 modeText = body.querySelector(".mode-text");
 
 const toggle1=document.getElementById("toggle_header_right"),
-toggle2=document.getElementById("toggle_header_left");
+toggle2=document.getElementById("toggle_header_right");
+
 
 //FUNCTIONS
 
@@ -18,25 +20,13 @@ toggle2=document.getElementById("toggle_header_left");
 //EVENT LISTENERS
 
 
-toggle2.addEventListener("click", () => {
-  sidebar_left.classList.toggle("close");
+
+
+searchBtn.addEventListener("click", () => {
   alert('something');
 });
-searchBtn.addEventListener("click", () => {
-    sidebar_left.classList.remove("close");
-});
 
 
-modeSwitch.addEventListener("click", () => {
-
-  body.classList.toggle("dark");
-
-  if (body.classList.contains("dark")) {
-    modeText.innerText = "Light mode";
-  } 
-  else {
-    modeText.innerText = "Dark mode";
-  }
-});
 
 
+alert(" Page Loaded");

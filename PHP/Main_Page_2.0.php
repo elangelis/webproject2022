@@ -1,174 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
-    <link rel="stylesheet" href="Main_Page_2.0.css">
-
+    <link rel="stylesheet" href="Main_Page_3.0.0.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-    <!--<title>Dashboard Sidebar Menu</title>-->
 </head>
-
 <body>
-    <div id="contents">
-        <div class="sidebars">
-            <nav class="sidebar_left close" id="sidebar_left">
-                <div class=header>
-                    <div class="image-text">
-                        <span class="image">
-                            <!--<img src="logo.png" alt="">-->
-                        </span>
-                        <div class="text logo-text">
-                            <span class="name">Ceid</span>
-                            <span class="profession">Project Web</span>
-                        </div>
+    <header>header</header>
+    <div class="content_class" id="content_id">
+        <nav class="sidebar_left_class" id="sidebar_left_id">sidebar left
+            <div class="sidebar_left_menu_class" id="sidebar_left_menu">
+                <div class="menu_links_class" id="menu_links">
+                    <div class="nav_link" id="user_score">
+                        <i class='bx bx-home-alt icon'></i>
+                        <span class="text nav-text">User Score</span>
                     </div>
-                    <i class='bx bx-chevron-left toggle'id="toggle_header_left"></i>
-                </div>
-                <div class="menu-bar">
-                    <div class="menu">
-                        <!-- 
-                        <li class="search-box">
-                            <i class='bx bx-search icon'></i>
-                            <input type="text" placeholder="Search...">
-                        </li>
-                        -->
-                        <ul class="menu-links">
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-home-alt icon'></i>
-                                    <span class="text nav-text">Dashboard</span>
-                                </a>
-                            </li>
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-bar-chart-alt-2 icon'></i>
-                                    <span class="text nav-text">Revenue</span>
-                                </a>
-                            </li>
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-bell icon'></i>
-                                    <span class="text nav-text">Notifications</span>
-                                </a>
-                            </li>
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-pie-chart-alt icon'></i>
-                                    <span class="text nav-text">Analytics</span>
-                                </a>
-                            </li>
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-heart icon'></i>
-                                    <span class="text nav-text">Likes</span>
-                                </a>
-                            </li>
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-wallet icon'></i>
-                                    <span class="text nav-text">Wallets</span>
-                                </a>
-                            </li>
-                        </ul>
+                    <div class="nav_link">
+                        <i class='bx bx-bar-chart-alt-2 icon'></i>
+                        <span class="text nav-text">User Profile</span>
                     </div>
-
-                    <div class="bottom-content">
-                    <li class="mode">
-                            <span class="mode-text text">Dark mode</span>
-                            <div class="toggle-switch" id="toggle_switch_1">
-                                <span class="switch"></span>
-                            </div>
-                        </li>
+                    <div class="nav_link">
+                        <i class='bx bx-bell icon'></i>
+                        <span class="text nav-text">Analytics</span>
+                    </div>
+                    <div class="nav_link">
+                        <i class='bx bx-pie-chart-alt icon'></i>
+                        <span class="text nav-text">History</span>
+                    </div>
+                    <div class="nav_link">
+                        <i class='bx bx-heart icon'></i>
+                        <span class="text nav-text">Likes</span>
+                    </div>
+                    <div class="nav_link">
+                        <i class='bx bx-wallet icon'></i>
+                        <span class="text nav-text">Υποβολή προσφοράς</span>
                     </div>
                 </div>
-            </nav>
-            <nav class="sidebar_right close" id="sidebar_right">
-                <div class="menu-bar">
-                    <div class=header>
-                        <div class="image-text">
-                            <span class="image">
-                                <!--<img src="logo.png" alt="">-->
-                            </span>
-                            <div class="text logo-text">
-                                <span class="name">"Application Name"</span>
-                                <span class="profession">Filters</span>
-                            </div>
-                        </div>
-                        <i class='bx bx-chevron-right toggle'id="toggle_header_right"></i>
-                    </div>
-                    <div class="menu">
-                        <li class="search-box">
-                            <i class='bx bx-search icon'></i>
-                            <input type="text" placeholder="Search...">
-                        </li>
-                        <ul class="menu-links">
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-bar-chart-alt-2 icon'></i>
-                                    <span class="text nav-text">Filter 1</span>
-                                </a>
-                            </li>
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-bar-chart-alt-2 icon'></i>
-                                    <span class="text nav-text">Filter 2</span>
-                                </a>
-                            </li>
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-bar-chart-alt-2 icon'></i>
-                                    <span class="text nav-text">Filter 3</span>
-                                </a>
-                            </li>
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-bar-chart-alt-2 icon'></i>
-                                    <span class="text nav-text">Filter 4</span>
-                                </a>
-                            </li>
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-bar-chart-alt-2 icon'></i>
-                                    <span class="text nav-text">Filter 5</span>
-                                </a>
-                            </li>
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-bar-chart-alt-2 icon'></i>
-                                    <span class="text nav-text">Filter 6</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bottom-content">
-                        <li class="">
-                            <a href="#">
-                                <i class='bx bx-log-out icon'></i>
-                                <span class="text nav-text">Logout</span>
-                            </a>
-                        </li>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <div class="mainContents" id="mainContents">
-            <div class="map_class">
-                <div id="map_text">Leaflet MAP </div>
-                <div id="map"></div>
             </div>
+        </nav>
+        <div class="map_menu_class" id="map_menu">
+            <div id="map_text">Leaflet MAP </div>
+            <div id="map"></div>
         </div>
+        <nav class="sidebar_right_class" id="sidebar_right">sidebar right
+            <div class="sidebar_right_menu-bar" id="sidebar_right_menu">
+                <div class="filters_class" id="filters">
+                    <div class="filter_box" id="filter_1">
+                        <span class="text nav-text">Search By Shop Name </span>
+                        <div class="search-box">
+                            <i class='bx bx-search icon'></i>
+                            <input type="text" placeholder="Shop Name...">
+                        </div>
+                    </div>
+                    <div class="filter_box" id="filter_2">
+                        <span class="text nav-text">Search By Item Category</span>
+                        <div class="search-box">
+                            <i class='bx bx-search icon'></i>
+                            <input type="text" placeholder="Item Category...">
+                        </div>
+                    </div>
+                </div>
+                <div class="r_s_logout_button_class" id="r_s_logout_button">
+                    <i class='bx bx-log-out icon'></i>
+                    <span class="text nav-text">Logout</span>
+                </div>
+            </div>
+        </nav>
     </div>
+    <footer>footer</footer>
     <div name='scripts'>
         <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+        <script type="text/javascript" src="leaflet2.0.0.js"></script>
+        <!--script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script-->
+        <!--script type="text/javascript" src="Main_Page_2.1.js"></script-->
+        <!--script type="text/javascript" src="leaflet2.0.0.js"></script-->
         <script type="text/javascript" src="Main_Page_2.1.js"></script>
-        <script type="text/javascript" src="/webproject2022/HTML_CSS_JAVASCRIPT/2.Main_Page/leaflet.js"></script>
     </div>
 </body>
-
 </html>

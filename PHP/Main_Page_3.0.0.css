@@ -1,0 +1,21 @@
+#map {
+    z-index: -1;
+    position: static;
+    left: 0px;
+    height: 680px;
+    width: 68%;
+    margin-left: 20px;
+    margin-right: 500px;
+    width: px;
+
+}
+#sidebar_right{
+    background-color: black;
+}
+#body{
+    size: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
