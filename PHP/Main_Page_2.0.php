@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
     <link rel="stylesheet" href="Main_Page_3.0.0.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 </head>
 <body>
-    <header>header</header>
+    <header class="header_class" id="header">header</header>
     <div class="content_class" id="content_id">
-        <nav class="sidebar_left_class" id="sidebar_left_id">sidebar left
+        <nav class="sidebar_left_class" id="sidebar_left">sidebar left
             <div class="sidebar_left_menu_class" id="sidebar_left_menu">
                 <div class="menu_links_class" id="menu_links">
                     <div class="nav_link" id="user_score">
@@ -42,7 +42,7 @@
                 </div>
             </div>
         </nav>
-        <div class="map_menu_class" id="map_menu">
+        <div class="map_widnow" id="map_window">
             <div id="map_text">Leaflet MAP </div>
             <div id="map"></div>
         </div>
@@ -71,7 +71,7 @@
             </div>
         </nav>
     </div>
-    <footer>footer</footer>
+    <footer class="footer_class"id="footer">footer</footer>
     <div name='scripts'>
         <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
         <script type="text/javascript" src="leaflet2.0.0.js"></script>

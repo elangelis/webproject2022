@@ -1,21 +1,85 @@
+#map_window{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin-top: 50px;
+    z-index: 0;
+}
+#map_text{
+    position: left;
+    text-align: center;
+    
+    top: 0px;
+    left: 0px;
+}
 #map {
     z-index: -1;
-    position: static;
+    position: fixed;
     left: 0px;
-    height: 680px;
-    width: 68%;
+    top: 0px;
+    height: 85%;
+    width: 100%;
     margin-left: 20px;
     margin-right: 500px;
     width: px;
-
+    top: 0px;
+    height: 85%;
+    width: 100%;
+    margin-top: 80px;
+    padding: 20px;
 }
 #sidebar_right{
-    background-color: black;
+    background-color: navajowhite;
+    position: fixed;
+    float: right;
+    z-index: 1;
+    width: 15%;
+    top: 0px;
+    right: 0px;
+    height: 85%;
+    margin-top: 80px;
+    padding: 20px;
 }
 #body{
+
     size: 100%;
     width: 100%;
     height: 100%;
     object-fit: scale-down;
-}
+    position: relative;
+    float: left;
 
+}
+#sidebar_left{
+
+    background-color: yellowgreen;
+    position: fixed;
+    float: left;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 15%;
+    height: 85%;
+    margin-top: 80px;
+    padding: 20px;
+
+}
+#header{
+    background-color: cadetblue;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    height: 5%;
+    width: 100%;
+}
+#footer{
+    background-color: aqua;
+    position: fixed;
+    float: left;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1;
+    width: 100%;
+    height: 5%;
+}
