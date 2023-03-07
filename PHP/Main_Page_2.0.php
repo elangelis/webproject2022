@@ -17,38 +17,38 @@
         <nav class="sidebar_left_class" id="sidebar_left">
             <div class="sidebar_left_menu_class" id="sidebar_left_menu">
                 <ul class="menu_links_class" id="menu_links">
-                    <li class="nav_link" id="menu_button_1">
-                        <a href="#">
+                    <li class="nav_link">
+                        <a href="#" id="menu_button_1"">
                             <i class='bx bx-home-alt icon'></i>
                             <span class="text nav-text">User Profile</span>
                         </a>
                     </li>
-                    <li class="nav_link"id="menu_button_2">
-                        <a href="#">
+                    <li class="nav_link">
+                        <a href="#"id="menu_button_2">
                             <i class='bx bx-bar-chart-alt-2 icon'></i>
                             <span class="text nav-text">Analytics</span>
                         </a>
                     </li>
-                    <li class="nav_link"id="menu_button_3">
-                        <a href="#">
+                    <li class="nav_link">
+                        <a href="#"id="menu_button_3">
                             <i class='bx bx-bell icon'></i>
                             <span class="text nav-text">Notifications</span>
                         </a>
                     </li>
-                    <li class="nav_link"id="menu_button_4">
-                        <a href="#">
+                    <li class="nav_link">
+                        <a href="#"id="menu_button_4">
                             <i class='bx bx-pie-chart-alt icon'></i>
                             <span class="text nav-text">History</span>
                         </a>
                     </li>
-                    <li class="nav_link"id="menu_button_5">
-                        <a href="#">
+                    <li class="nav_link">
+                        <a href="#"id="menu_button_5">
                             <i class='bx bx-heart icon'></i>
                             <span class="text nav-text">Likes</span>
                         </a>
                     </li>
-                    <li class="nav_link"id="menu_button_6">
-                        <a href="#">
+                    <li class="nav_link">
+                        <a href="#"id="menu_button_6">
                             <i class='bx bx-wallet icon'></i>
                             <span class="text nav-text">Points wallet</span>
                         </a>
