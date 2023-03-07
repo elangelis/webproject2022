@@ -1,5 +1,5 @@
 //GLOBAL VARIABLES LEAFLET
-alert("Leaflet Start ");
+//alert("Leaflet Start ");
 
 const map = L.map('map');
 let marker,circle,polygon,popup;
@@ -81,11 +81,11 @@ function success(position){
     }
 
     marker = L.marker([lat,lng]).addTo(map);
-    circle = L.circle([lat,lng],{radius:50}).addTo(map);
+    circle = L.circle([lat,lng],{radius:100}).addTo(map);
     map.fitBounds(circle.getBounds());
     map.setView([lat,lng],18);
 }
 
 navigator.geolocation.watchPosition(success, error, options);
 
-alert(" Leaflet Loaded");
+//alert(" Leaflet Loaded");
