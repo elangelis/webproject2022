@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 </head>
-
 <body>
     <header class="header_class" id="header">header</header>
     <div class="content_class" id="content_id">
@@ -57,7 +56,7 @@
     </div>
     </nav>
     <div class="map_widnow" id="map_window">
-        <div id="map_text">Leaflet MAP </div>
+        <div id="map_text"></div>
         <div id="map"></div>
     </div>
     <nav class="sidebar_right_class" id="sidebar_right">

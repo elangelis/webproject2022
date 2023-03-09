@@ -40,18 +40,23 @@ searchBtn_name.addEventListener("click", () => {
 searchBtn_item.addEventListener("click", () => {
   alert('something else');
 });
+
 user_profile.addEventListener("click", () => {
   alert('user_profile');
 });
+
 Notifications.addEventListener("click", () => {
   alert('Notifications');
 });
+
 Analytics.addEventListener("click", () => {
   alert('Analytics');
 });
+
 History_1.addEventListener("click", () => {
   alert('History');
 });
+
 Likes.addEventListener("click", () => {
   alert('Likes');
 });
