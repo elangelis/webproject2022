@@ -7,7 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
-@media only screen and (min-device-width: 768px) /*LAPTOP*/{
+@media only screen and (min-device-width: 768px)
+
+/*LAPTOP*/
+    {
     :root {
         /* ===== Colors ===== */
         --body-color: #18191a;
@@ -61,7 +64,80 @@
     .text {
         color: var(--text-color);
     }
+    /*POPUP SETTINGS MENU*/
 
+    .tabcontent {
+        color: var(--text-color);
+        background-color: #73AD21;
+        
+    }
+    #Tab_1 {
+        border-radius: 25px;
+        border: 2px solid #73AD21;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        height: 85%;
+        width: 90%;
+        margin: 5%;
+        background-color: red;
+    }
+    #Tab_2{
+        border-radius: 25px;
+        border: 2px solid #73AD21;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        height: 85%;
+        width: 90%;
+        margin: 5%;
+        background-color: white;
+        
+    }
+    #Tab_3{
+        border-radius: 25px;
+        border: 2px solid #73AD21;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        height: 85%;
+        width: 90%;
+        margin: 5%;
+        background-color: green;
+    }
+    #Tab_4{
+        border-radius: 25px;
+        border: 2px solid #73AD21;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        height: 85%;
+        width: 90%;
+        margin: 5%;
+        background-color: blue;
+    }
+    #Tab_5{
+        border-radius: 25px;
+        border: 2px solid #73AD21;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        height: 85%;
+        width: 90%;
+        margin: 5%;
+        background-color: goldenrod;
+    }
+    #Tab_6{
+        border-radius: 25px;
+        border: 2px solid #73AD21;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        height: 85%;
+        width: 90%;
+        margin: 5%;
+        background-color: grey;
+    }
     /*map*/
     #map_window {
         background-color: var(--body-color);
@@ -73,6 +149,8 @@
     }
 
     #map {
+
+        border: 5px solid #73AD21;
         z-index: -1;
         position: fixed;
         left: 15%;
@@ -83,6 +161,40 @@
         margin-right: 0px;
         margin-top: 0px;
         padding: 20px;
+    }
+
+    #PopUpSettings {
+        
+        display:none;
+        /*visibility: hidden;*/
+        border-radius: 25px;
+        border: 2px solid #73AD21;
+        z-index: 2;
+        position: fixed;
+        left: 20%;
+        top: 15%;
+        height: 75%;
+        width: 60%;
+        padding: 20px;
+        background-color: var(--sidebar-color);
+        opacity: 100%;
+    }
+
+    #PopUpFilters {
+
+        display:none;
+        /*visibility: hidden;*/
+        border-radius: 25px;
+        border: 2px solid #73AD21;
+        z-index: 2;
+        position: fixed;
+        left: 30%;
+        top: 15%;
+        height: 75%;
+        width: 40%;
+        padding: 20px;
+        background-color: var(--sidebar-color);
+        opacity: 100%;
     }
 
 
@@ -255,7 +367,10 @@
 }
 
 
-@media only screen and (max-device-width: 768px)/*MOBILES*/{
+@media only screen and (max-device-width: 768px)
+
+/*MOBILES*/
+    {
     :root {
         /* ===== Colors ===== */
         --body-color: #18191a;
@@ -271,6 +386,7 @@
         --tran-04: all 0.3s ease;
         --tran-05: all 0.3s ease;
     }
+
     #header {
         background-color: var(--sidebar-color);
         position: fixed;
@@ -431,7 +547,7 @@
     }
 
     .sidebar_right_menu_class li a {
-        
+
         list-style: none;
         height: 50%;
         font-size: 10px;

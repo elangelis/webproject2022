@@ -1,0 +1,71 @@
+* {box-sizing: border-box
+
+}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+#Button_Menu{
+    height: 100%;
+    width: 30%;
+    top: 0%;
+    left: 0%;
+}
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {
+    background-color: red;
+}
+#News {
+    background-color: green;
+}
+#Contact {
+    background-color: blue;
+}
+#About {
+    background-color: orange;
+}
+#Points_wallet{
+    background-color: rgb(112, 25, 25);
+}
+#Likes{
+    background-color: rgb(208, 67, 67);
+}
+#Notifications{
+    background-color: rgb(76, 107, 54);
+}
+#Analytics{
+    background-color: rgb(69, 11, 117);
+}
+#History{
+    background-color: rgb(51, 7, 55);
+}
+#Settings{
+    background-color: rgb(17, 4, 4);
+}
